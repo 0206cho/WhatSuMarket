@@ -24,7 +24,7 @@
     
                     </v-card>
                 </v-hover>
-            </v-col>
+            </v-col> 
             <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index">
               <v-hover v-slot="{ hover }">
                 <v-card  :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320">
