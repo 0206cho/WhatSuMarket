@@ -1,8 +1,8 @@
 <template>
     <v-container style="height=100%; width: 100%;" class="px-16">
-        <v-btn to="/test">
+        <!-- <v-btn to="/test">
             Test로 이동
-        </v-btn>
+        </v-btn> -->
 
         <h1 style="display: flex; justify-content: center; font-weight: bold;">중고거래 인기매물</h1> <br>
         <v-row style="display: flex; justify-content: center;" class="pb-8">

@@ -24,8 +24,8 @@
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer><!--<v-spacer>옆으로 밀기.-->
-                <v-btn dark color="#388E3C">채팅하기</v-btn> <!--block : 꽉채우게~-->
-                <v-btn dark color="#388E3C">구매하기</v-btn> <!--block : 꽉채우게~-->
+                <v-btn dark color="#008037">채팅하기</v-btn> <!--block : 꽉채우게~-->
+                <v-btn dark color="#008037">구매하기</v-btn> <!--block : 꽉채우게~-->
             </v-card-actions>
         </v-card>
     </v-container>

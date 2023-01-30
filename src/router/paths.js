@@ -16,4 +16,12 @@ export default [{
     // 상세페이지
     path: '/detail',
     view: 'Detail'
-}]
+},{
+    path: '/insert',
+    view: 'Insert'
+}, {
+    path: '/login',
+    view: 'Login'
+}
+
+]
