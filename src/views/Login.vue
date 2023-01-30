@@ -9,7 +9,7 @@
     
                 <v-col cols="4">
                     <v-card elevation="12" width="350" height="450" style="border-radius:25px; border: 1px solid #008037">
-                        <v-img :src="require('../../image/whatshu.png')" max-height="85" max-width="190" style="margin: 1em auto;"></v-img>
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="85" max-width="190" style="margin: 1em auto;"></v-img>
                         <!-- <h1 style="text-align: center;" class="pt-6">왓슈</h1> -->
                         <v-card-text class="pt-6 pb-0 mb-0">
                             <v-text-field  label="ID" prepend-inner-icon="mdi-account" color="#008037">
