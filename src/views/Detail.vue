@@ -7,7 +7,7 @@
                 <!--show-arrows-on-hover : 마우스 가져가면 버튼 활성화, hide-delimiter-background : 하단바x-->
                 <v-carousel-item v-for="(img,i) in imgs" :key="i" :src="img.src" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
             </v-carousel>
-        </div>
+        </div> 
     
         <!--내용-->
         <v-card flat class="mx-auto rounded-lg" width="100%" height="100%" style="border:none;">
