@@ -6,7 +6,7 @@
             <v-col cols="6">
                 <v-card>
                     <v-card-title>
-                        상품등록
+                        상품등록 
                     </v-card-title>
                     <v-card-text>
                         <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp" prepend-icon="mdi-camera" label="사진등록"></v-file-input>
