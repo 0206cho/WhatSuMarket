@@ -15,7 +15,7 @@
                                 <v-img :src="require('../../image/iphone.png')" class="mt-3 ml-3" max-height="200"
                                     max-width="190" style="float:left;"></v-img>
                                 <span style="font-size: 20px;" class="font-weight-bold body-3 pb-10 ml-7">아이폰 14pro
-                                    판매</span>
+                                    판매~</span>
                                 <!-- <v-spacer></v-spacer> -->
                             </div>
                         </v-card>
