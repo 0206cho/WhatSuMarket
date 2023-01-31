@@ -36,6 +36,14 @@ export default [{
     // 결제페이지
     path: '/pay',
     view: 'Pay'
+},{
+    // 회원가입
+    path: '/signup',
+    view: 'Signup'
+},{
+    // 내역
+    path: '/history',
+    view: 'History'
 }
 
 ]
