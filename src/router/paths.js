@@ -32,6 +32,10 @@ export default [{
     // 마이페이지 - 충전내역
     path: '/point',
     view: 'Point'
+},{
+    // 결제페이지
+    path: '/pay',
+    view: 'Pay'
 }
 
 ]
