@@ -4,63 +4,30 @@
     <v-row justify="center" align="center">
       <v-col cols="6">
         <v-card>
-          <v-card-title>
-            <v-tabs color="#008037" v-model="tab">
-              <v-tab v-for="title in titles" :key="title.title">
-                {{title.title}}
-              </v-tab>
-            </v-tabs>
-          </v-card-title>
-          <v-tabs-items v-model="tab">
-            <v-tab-item v-for="col in cols" :key="col.col_list">
-              
-              <v-simple-table>
-                <template v-slot:default>
-                  <thead>
-                    <tr>
-                      <th class="text-left">
-                        {{col.col_list}}
-                      </th>
-                      <th class="text-left">
-                        {{col.col_date}}
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <!-- <td>{{ item.date }}</td>
-                      <td>{{ item.tab }}</td> -->
-                    </tr>
-                  </tbody>
-                </template>
-              </v-simple-table>
-
-              <!-- <v-card-text>
-                {{item.title}}<br/>
-                Here, You can see Something!
-              </v-card-text> -->
-            </v-tab-item>
-          </v-tabs-items>
-          <!-- <v-simple-table>
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th class="text-left">
-                    신청내역
-                  </th>
-                  <th class="text-left">
-                    신청날짜
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                  <td>{{ item.name }}</td>
-                  <td>{{ item.calories }}</td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table> -->
+          <v-tabs v-model="tab" color="#008037">
+            <v-tab v-for="item in tab_items" :key="item">
+              {{ table[item].title }}
+            </v-tab>
+          </v-tabs>
+          <v-card-text>
+            <v-tabs-items v-model="tab" class="text-center">
+              <v-tab-item v-for="item in tab_items" :key="item">
+                <v-row v-if="item == 'charge'" justify="center" align="center">
+                  <v-col cols="4"> <!--item이 charge인 경우-->
+                    <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
+                      <v-card-actions class="px-10">
+                        <span style="float:left; align-items: center;">10,980냥</span>
+                        <v-spacer></v-spacer>
+                        <v-btn dark color="#008037" style="border-radius: 30px; float: right;" width="30%">충전</v-btn>
+                      </v-card-actions>
+                    </v-card>
+                  </v-col>
+                </v-row>
+                <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center">
+                </v-data-table>
+              </v-tab-item>
+            </v-tabs-items>
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -72,36 +39,62 @@ export default {
 
   data() {
     return {
-      desserts: [
-        {
-          name: '오래된 소주',
-          calories: "2023-01-31",
+      table: {
+        'apply': {
+          'title': '신청내역',
+          'headers': [{
+            text: '신청내역',
+            value: 'log'
+          }, {
+            text: '신청날짜',
+            value: 'date'
+          }],
+          'values': [
+            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', date: '2021-33-21' },
+          ]
         },
-        {
-          name: '아이폰 14 PRO',
-          calories: "2023-01-31",
+        'payment': {
+          'title': '결제내역',
+          'headers': [{
+            text: '결제내역',
+            value: 'log'
+          }, {
+            text: '결제날짜',
+            value: 'date'
+          }],
+          'values': [
+            { log: '오래된 소주', date: '2021-33-21' },
+            { log: '아이폰 14 PRO', date: '2021-33-21' },
+            { log: '오래된 아이폰', date: '2021-33-21' },
+            { log: '아이폰 소주', date: '2021-33-21' },
+            { log: '오래된 14 PRO', date: '2021-33-21' },
+          ]
         },
-      ],
-      
-      tab : null,
-
-      cols:[
-          {
-            col_list : '신청내역',
-            col_date : '신청날짜'
-          },
-          {
-            col_list : '결제내역',
-            col_date : '결제날짜'
-          },
-          {
-            col_list : '충전내역',
-            col_date : '충전날짜'
-          },
-        ],
-        titles:[
-          {title:'신청내역'}, {title:'결제내역'}, {title:'충전내역'}
-        ]
+        'charge': {
+          'title': '충전내역',
+          'headers': [{
+            text: '결제내역',
+            value: 'log'
+          }, {
+            text: '결제날짜',
+            value: 'date'
+          }],
+          'values': [
+            { log: '오래전 충전', date: '2021-33-21' },
+            { log: '14냥', date: '2021-33-21' },
+            { log: '2020ㅋㅋ', date: '2021-33-21' },
+            { log: '아이폰 소주', date: '2021-33-21' },
+            { log: '오래된 14 PRO', date: '2021-33-21' },
+          ]
+        }
+      },
+      tab_items: ['apply', 'payment', 'charge'],
+      tab: null,
     }
   },
 
