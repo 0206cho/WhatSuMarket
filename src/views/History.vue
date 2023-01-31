@@ -47,12 +47,12 @@ export default {
       return {
         desserts: [
           {
-            name: 'Frozen Yogurt',
-            calories: 159,
+            name: '오래된 소주',
+            calories: "2023-01-31",
           },
           {
-            name: 'Ice cream sandwich',
-            calories: 237,
+            name: '아이폰 14 PRO',
+            calories: "2023-01-31",
           },
         ],
       }
