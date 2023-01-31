@@ -3,9 +3,9 @@
     <v-container style="height=100%; width: 100%; padding-left: 500px; padding-right: 500px;" class="pt-10">
         <!--이미지 캐러셀-->
         <div class="pb-4">
-            <v-carousel style="border-radius: 20px;" hide-delimiter-background show-arrows-on-hover>
+            <v-carousel color="primary" style="border-radius: 20px;" hide-delimiter-background show-arrows-on-hover>
                 <!--show-arrows-on-hover : 마우스 가져가면 버튼 활성화, hide-delimiter-background : 하단바x-->
-                <v-carousel-item v-for="(img,i) in imgs" :key="i" :src="img.src" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
+                <v-carousel-item  v-for="(img,i) in imgs" :key="i" :src="img.src" reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
             </v-carousel>
         </div> 
     
@@ -16,16 +16,16 @@
             <v-card-text class="pb-6">
                 <p class="black--text pb-4" style="font-weight: bold;">10,000원</p>
                 <!-- <hr style="border: 0; height: 1px; background: #cccccc"> -->
-                <v-divider></v-divider>
+                <v-divider style="border-color:#008037;"></v-divider>
                 <p class="black--text pt-4" style="font-weight: bold; line-height: 35px;">10년 묵은 소주임다<br>상해서 배탈나도 책임 안져유~</p>
-                <p class="pt-6 pb-4">관심 88 &nbsp;| &nbsp; 채팅 172</p>
-                <v-divider></v-divider>
+                <p class="pt-6 pb-4" style="color: #008037;">관심 88 &nbsp;| &nbsp; 채팅 172</p>
+                <v-divider style="border-color:#008037;"></v-divider>
                 <!-- <hr style="border: 0; height: 1px; background: #cccccc"> -->
             </v-card-text>
             <v-card-actions>
                 <v-spacer></v-spacer><!--<v-spacer>옆으로 밀기.-->
-                <v-btn dark color="#008037" style="border-radius: 30px;">채팅하기</v-btn> <!--block : 꽉채우게~-->
-                <v-btn dark color="#008037" style="border-radius: 30px;">구매하기</v-btn> <!--block : 꽉채우게~-->
+                <v-btn dark color="#008037" style="border-radius: 30px;" class="px-5">채팅하기</v-btn> <!--block : 꽉채우게~-->
+                <v-btn dark color="#008037" style="border-radius: 30px;" class="px-5">구매하기</v-btn> <!--block : 꽉채우게~-->
             </v-card-actions>
         </v-card>
     </v-container>

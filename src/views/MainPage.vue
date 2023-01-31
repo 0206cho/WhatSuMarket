@@ -20,40 +20,21 @@
                     <v-btn to="/pay" color="green" outlined>
                         결제페이지
                     </v-btn>
-                    <v-btn color="green" outlined to="/setting">
+                    <v-btn color="green" outlined to="/mypage/setting">
                         마이페이지 - 설정
                     </v-btn>
-                    <v-btn color="green" outlined to="/point">
+                    <v-btn color="green" outlined to="/mypage/point">
                         마이페이지 - 충전
                     </v-btn>
-                    <v-btn color="green" outlined to="/history">
+                    <v-btn color="green" outlined to="/mypage/history">
                         마이페이지 - 내역
                     </v-btn>
                     <v-spacer></v-spacer>
                 </v-card-actions>
             </v-col>
-            <v-col cols="3" class="mx-4">
-                <v-hover v-slot="{ hover }">
-                    <!-- to="/detail"로 해도 됨-->
-                    <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320">
-                        <v-img max-height="200" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQjPsh-bx9C8LzWmujKINz52H6A4to8r2CuQ&usqp=CAU"></v-img>
-    
-                        <v-card-title class="pb-1">아이폰14 pro 미개봉</v-card-title>
-    
-                        <v-card-text class="pb-1">
-                            <div class="black--text" style="font-weight: bold;">
-                                2,000,000원
-                            </div>
-    
-                            <div class="pt-3">관심 88 &nbsp;| &nbsp; 채팅 172</div>
-                        </v-card-text>
-    
-                    </v-card>
-                </v-hover>
-            </v-col> 
-            <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index">
+            <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index" >
               <v-hover v-slot="{ hover }">
-                <v-card  :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320">
+                <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" style="border-radius:25px; border: 1px solid #008037">
                   <v-img height="200" :src="`https://picsum.photos/${index}00/300`"></v-img>
 
                   <v-card-title class="pb-1">{{ product.title }}</v-card-title>
@@ -63,7 +44,7 @@
                         {{product.price.toLocaleString()}}원
                     </div>
 
-                    <div class="pt-3">관심 {{ product.favorite }} &nbsp;| &nbsp; 채팅 {{ product.chat }}</div>
+                    <div class="pt-3" style="color:#008037">관심 {{ product.favorite }} &nbsp;| &nbsp; 채팅 {{ product.chat }}</div>
                 </v-card-text>
                 </v-card>
               </v-hover>
