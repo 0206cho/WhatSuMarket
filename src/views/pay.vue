@@ -6,13 +6,13 @@
                 <v-col cols="4">
                     <v-card elevation="12" width="500" height="450"
                         style="border-radius:25px; border: 1px solid #008037">
-                        <v-img :src="require('../../image/whatshu.png')" max-height="85" max-width="190"
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="85" max-width="190"
                             style="margin: 1em auto;"></v-img>
                         <v-card width="500" height="250"
                             style="border-radius:0px; border-top: 1px solid #008037; border-bottom: 1px solid #008037;">
                             <div>
                                 <!-- <v-spacer></v-spacer><v-spacer>옆으로 밀기. -->
-                                <v-img :src="require('../../image/iphone.png')" class="mt-3 ml-3" max-height="200"
+                                <v-img :src="require('../../images/iphone.png')" class="mt-3 ml-3" max-height="200"
                                     max-width="190" style="float:left;"></v-img>
                                 <span style="font-size: 20px;" class="font-weight-bold body-3 pb-10 ml-7">아이폰 14pro
                                     판매~</span>
