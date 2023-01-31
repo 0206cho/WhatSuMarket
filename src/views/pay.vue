@@ -1,35 +1,109 @@
 <template>
     <v-container style="max-width:1300px" fill-height>
-        <v-layout align-center row wrap>
-            <v-row>
-                <v-col cols="4"></v-col>
-                <v-col cols="4">
-                    <v-card elevation="12" width="500" height="450"
-                        style="border-radius:25px; border: 1px solid #008037">
-                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="85" max-width="190"
+        <div class="container-fluid">
+            <v-layout align-center row wrap>
+                <v-row>
+                    <v-col cols="4"></v-col>
+                    <v-col cols="4">
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="85" max-width="170"
                             style="margin: 1em auto;"></v-img>
-                        <v-card width="500" height="250"
-                            style="border-radius:0px; border-top: 1px solid #008037; border-bottom: 1px solid #008037;">
-                            <div>
-                                <!-- <v-spacer></v-spacer><v-spacer>옆으로 밀기. -->
-                                <v-img :src="require('../../images/iphone.png')" class="mt-3 ml-3" max-height="200"
-                                    max-width="190" style="float:left;"></v-img>
-                                <span style="font-size: 20px;" class="font-weight-bold body-3 pb-10 ml-7">아이폰 14pro
-                                    판매~</span>
-                                <!-- <v-spacer></v-spacer> -->
-                            </div>
+
+                        <v-card width="400" height="140" style="border-radius:1em; border: 1px solid #008037">
+                            <v-app-bar height="40" dark color="#008037">
+                                <v-icon>mdi-account-circle</v-icon>
+                                <v-toolbar-title
+                                    class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문 상품 정보</v-toolbar-title>
+                            </v-app-bar>
+                            <v-img :src="require('../../images/iphone.png')" max-height="150"
+                                max-width="100" style="float:left; position: relative; left: 1em; top: 11px;"></v-img>
+
+                            <p style="position: relative; left:22px; top:1em;" class="subtitle-1 font-weight-bold"> 상품 : 아이폰
+                                14 pro 미개봉</p>
+                            <p style="position: relative; left:2.03em; bottom:2px;" class="caption font-weight-bold"> 가격 :
+                                2,000,000원</p>
+                            <p style="position: relative; left:10.36em; bottom:1.5em;" class="caption font-weight-bold"> 총 1개</p>
+
+
                         </v-card>
-                        <v-card-actions>
-                            <v-btn style="border-radius: 30px; margin: 9.5em" class="mt-4 py-18" width="120"
-                                elevation="2" type="submit" color="#008037" dark>
-                                결제하기
-                            </v-btn>
-                        </v-card-actions>
-                    </v-card>
-                </v-col>
-            </v-row>
-        </v-layout>
+                    </v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col>
+
+
+
+                        <v-card width="400" height="400" style="border-radius:1em; border: 1px solid #008037">
+                            <v-app-bar height="40" dark color="#008037">
+                                <v-icon>mdi-magnify</v-icon>
+
+                                <v-toolbar-title prepend-inner-icon="fa-light fa-coin"
+                                    class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문/배송 정보</v-toolbar-title>
+                            </v-app-bar>
+                            <p></p>
+
+                            <v-form>
+                                <p style="position: relative; left: 2px; "
+                                    class=" font-weight-bold caption mt-1 ml-4 pl-0">1. 주문자 정보</p>
+
+
+                                <v-text-field style="max-width: 10.5em; bottom: 5px;" class="shrink mx-4" dense
+                                    label="name" color="#008037" outlined clearable></v-text-field>
+
+                                <v-text-field style="max-width: 10.5em; bottom: 4.39em; left: 12em;" class="shrink mx-4"
+                                    dense label="number" color="#008037" outlined clearable></v-text-field>
+                                <v-text-field style="max-width: 22.55em; bottom:5em" class="shrink mx-4" dense
+                                    label="email" color="#008037" outlined clearable></v-text-field>
+                                <p style="position: relative; left: 2px; bottom: 2.55cm;"
+                                    class="font-weight-bold caption mt-1 ml-4 pl-0">2. 배송지 정보</p>
+                                <v-text-field style="max-width: 22.55em; bottom:2.7cm" class="shrink mx-4" dense
+                                    label="address" color="#008037" outlined clearable></v-text-field>
+                                <v-text-field style="max-width: 22.55em; bottom:2.95cm" class="shrink mx-4" dense
+                                    label="detail" color="#008037" outlined clearable></v-text-field>
+                                <v-text-field style="max-width: 22.55em; bottom:3.2cm" class="shrink mx-4" dense
+                                    label="request" color="#008037" outlined clearable></v-text-field>
+                            </v-form>
+                        </v-card>
+                    </v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col>
+                        <v-card width="400" height="240" style="border-radius:1em; border: 1px solid #008037">
+                            <v-app-bar height="40" style="border-radius: 2em;  border: 1px solid #008037">
+                                <v-icon>mdi-star</v-icon>
+
+                                <v-toolbar-title prepend-inner-icon="fa-light fa-coin"
+                                    class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;캐쉬/포인트</v-toolbar-title>
+                            </v-app-bar>
+                            <p></p>
+                            <p style="position: relative; left: 7px;" class=" font-weight-bold caption mt-1 ml-3 pl-0">
+                                1. 캐쉬</p>
+                            <v-text-field style="max-width: 17em; bottom: 5px;" class="shrink mx-4" dense label="cash"
+                                color="#008037" outlined clearable></v-text-field>
+                            <v-card-actions>
+                                <v-btn color="#008037" dark style="left: 22em; bottom:5.5em">
+                                    <v-icon>mdi-checkbox-marked-circle</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                            <p style="position: relative; left: 7px; bottom: 6em;"
+                                class=" font-weight-bold caption mt-1 ml-3 pl-0">2. 포인트</p>
+                            <v-text-field style="max-width: 17em; bottom: 5em;" class="shrink mx-4" dense label="point"
+                                color="#008037" outlined clearable></v-text-field>
+                            <v-card-actions>
+                                <v-btn color="#008037" dark style="left: 22em; bottom:10.8em">
+                                    <v-icon>mdi-checkbox-marked-circle</v-icon>
+                                </v-btn>
+                            </v-card-actions>
+                        </v-card>
+                    </v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col cols="4"></v-col>
+                    <v-col>
+                    </v-col>
+                </v-row>
+            </v-layout>
+        </div>
     </v-container>
+
 </template>
 <script>
 export default {
