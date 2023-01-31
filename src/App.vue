@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <v-app>
-      <app-bar/>
-      <drawer/>
-      <core-view/>
-      <core-footer/>
+      <app-bar />
+      <drawer />
+      <core-view />
+      <core-footer />
     </v-app>
   </div>
 </template>
-
+<style>
+@font-face {
+  font-family: 'KOTRA_BOLD';
+  src: url('../font/KOTRA_BOLD.ttf') format('truetype');
+  font-weight: 1000;
+}
+</style>
 <script>
 export default {
   components: {

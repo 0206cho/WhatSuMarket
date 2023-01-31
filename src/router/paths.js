@@ -26,16 +26,28 @@ export default [{
     view: 'Login'
 },{
     // 마이페이지 - 설정
-    path: '/setting',
+    path: '/mypage/setting',
     view: 'Setting'
 },{
     // 마이페이지 - 충전내역
-    path: '/point',
+    path: '/mypage/point',
     view: 'Point'
 },{
     // 결제페이지
     path: '/pay',
     view: 'Pay'
+},{
+    // 회원가입
+    path: '/signup',
+    view: 'Signup'
+},{
+    // 마이페이지 - 내역
+    path: '/mypage/history',
+    view: 'History'
+},{
+    // 마이페이지 - 메인
+    path: '/mypage',
+    view: 'Mypage'
 }
 
 ]

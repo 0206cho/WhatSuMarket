@@ -6,8 +6,9 @@
                 <v-col cols="4">
                     <v-card elevation="12" width="350" height="100%"
                         style="border-radius:25px; border: 1px solid #008037">
-                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="85" max-width="190"
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110"
                             style="margin: 1em auto;"></v-img>
+                            <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">설&nbsp;정</div>
                         <v-card-text class="pt-6 pb-0 mb-0">
                             <v-text-field label="Name" prepend-inner-icon="mdi-account" color="#008037">
                             </v-text-field>
@@ -38,6 +39,6 @@
 </template>
 <script>
 export default {
-    name: "login",
+    name: "Setting",
 }
 </script>

@@ -1,11 +1,37 @@
 <template>
     <v-container style="height=100%; width: 100%;" class="px-16">
-        <!-- <v-btn to="/test">
-            Test로 이동
-        </v-btn> -->
-
         <h1 style="display: flex; justify-content: center; font-weight: bold;">중고거래 인기매물</h1> <br>
         <v-row style="display: flex; justify-content: center;" class="pb-8">
+            <v-col cols="12" class="py-3">
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="green" outlined to="/signup">
+                        회원가입페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/login">
+                        로그인페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/insert">
+                        상품 등록페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/detail">
+                        상품 상세페이지
+                    </v-btn>
+                    <v-btn to="/pay" color="green" outlined>
+                        결제페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/setting">
+                        마이페이지 - 설정
+                    </v-btn>
+                    <v-btn color="green" outlined to="/point">
+                        마이페이지 - 충전
+                    </v-btn>
+                    <v-btn color="green" outlined to="/history">
+                        마이페이지 - 내역
+                    </v-btn>
+                    <v-spacer></v-spacer>
+                </v-card-actions>
+            </v-col>
             <v-col cols="3" class="mx-4">
                 <v-hover v-slot="{ hover }">
                     <!-- to="/detail"로 해도 됨-->

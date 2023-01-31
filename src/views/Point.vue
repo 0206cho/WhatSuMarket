@@ -1,19 +1,20 @@
 <template>
-    <v-container style="height=100%; width: 100%;" class="px-16">
-        <div style="display: flex; justify-content: center;" class="pt-10">
-            <v-card flat class="px-6 pt-5 pb-5" width="350" style="border-radius:25px; border: 1px solid #008037">
-                <div class="mx-10 pb-4">
-                    <v-spacer></v-spacer>
-                    <span class="pt-2" style="float:left; align-items: center;" width="200%">10,980냥</span>
-                    <v-btn dark color="#008037" class="pb-1" style="border-radius: 30px; float: right;" width="30%"
-                        height="40px">충전</v-btn>
-                    <v-spacer></v-spacer>
-                </div>
-            </v-card>
-        </div>
-        <br>
-        <div style="display: flex; justify-content: center;">
-            <v-simple-table style="width:800px; align-items: center;" class="text-center">
+    <v-container>
+        <v-row justify="center" align="center">
+            <v-col cols="3" sm="3" xs="6" md="3" class="mt-15">
+                <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
+                        <v-card-actions class="px-10">
+                        <span style="float:left; align-items: center;">10,980냥</span>
+                        <v-spacer></v-spacer>
+                        <v-btn dark color="#008037" style="border-radius: 30px; float: right;" width="30%">충전</v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-col>
+        </v-row>
+
+        <v-row justify="center" align="center">
+            <v-col cols="6">
+            <v-simple-table style="align-items: center;" class="text-center">
                 <template v-slot:default>
                     <thead>
                         <tr>
@@ -26,24 +27,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="item in desserts" :key="item.point">
+                        <tr v-for="item, index in desserts" :key="index+1">
                             <td>{{ item.point }}</td>
                             <td>{{ item.date }}</td>
                         </tr>
                     </tbody>
                 </template>
             </v-simple-table>
-        </div>
+        </v-col>
+        </v-row>
     </v-container>
 </template>
 <script>
 export default {
+    name: "Point",
     data() {
         return {
             desserts: [
                 {
-                    point: '+200냥',
-                    date: '2023-01-30',
+                    point: "+200냥",
+                    date: "2023-01-30",
                 },
                 {
                     point: '-200냥',
