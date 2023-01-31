@@ -44,6 +44,9 @@ export default [{
     // 내역
     path: '/history',
     view: 'History'
+},{
+    path: '/history/detail',
+    view: 'HistoryDetail'
 }
 
 ]

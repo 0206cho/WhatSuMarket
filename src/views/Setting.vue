@@ -38,6 +38,6 @@
 </template>
 <script>
 export default {
-    name: "login",
+    name: "Setting",
 }
 </script>
