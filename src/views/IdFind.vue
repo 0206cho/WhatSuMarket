@@ -1,119 +1,38 @@
 <template>
-    <!-- 템플릿안에 컨테이너가 있어야함 -->
-    <v-container fluid  fill-height>
-        <v-row justify="center">
-            <v-col
-              cols="10"
-              sm="8"
-              md="6"
-              lg="4"
-            > 아이디찾기
-              <v-card ref="form">
-                <v-card-text>
-                  
-                  <v-text-field
-                    ref="phone"
-                    v-model="phone"
-                    :rules="[() => !!phone || '전화번호를 입력하세요']"
-                    :error-messages="errorMessages"
-                    label="전화번호"
-                    placeholder="ex)010-1234-5678"
-                    required
-                  ></v-text-field>
-
-                </v-card-text>
-                <v-divider class="mt-12"></v-divider>
-                <v-card-actions>
-                  <v-btn text>
-                    취소
-                  </v-btn>
-                  <v-spacer></v-spacer>
-  
-                  <v-btn
-                    color="primary"
-                    text
-                    @click="submit"
-                  >
-                    확인
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
-          </v-row>
+    <v-container style="max-width:1300px" fill-height>
+        <v-layout align-center row wrap>
+            <v-row>
+                <v-col cols="4"></v-col>
+                <v-col cols="4">
+                    <v-card elevation="12" width="350" height="100%"
+                        style="border-radius:25px; border: 1px solid #008037">
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110"
+                            style="margin: 1em auto;"></v-img>
+                            <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">아이디&nbsp;찾기</div>
+                        <v-card-text class="pt-6 pb-0 mb-0">
+                        
+                            <v-text-field label="Mobile" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
+                            </v-text-field>
+                            <v-card-actions class="mx-2 mb-5">
+                                <v-spacer></v-spacer>
+                                    <v-btn color="" style="border-radius: 30px;" width="50%">인증하기</v-btn>
+                                    <v-spacer></v-spacer>
+                            </v-card-actions>
+                        </v-card-text>
+                        <v-card-actions class="mx-2 mb-5">
+                            <v-spacer></v-spacer>
+                                <v-btn dark color="#008037" style="border-radius: 30px;" width="50%">확인</v-btn>
+                                <v-btn dark color="#6B8A78" style="border-radius: 30px;" width="50%">취소</v-btn>
+                                <v-spacer></v-spacer>
+                        </v-card-actions>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-layout>
     </v-container>
-
 </template>
 <script>
 export default {
     name: "IdFind",
-    data () {
-      return {
-        show1: false,
-       
-      phone: null,
-    
-      formHasErrors: false,
-      }
-    },
-    computed: {
-      form () {
-        return {
-          phone: this.phone,
-        }
-      },
-    },
-
-    watch: {
-      name () {
-        this.errorMessages = ''
-      }
-     
-    },
-
-    methods: {
-
-      resetForm () {
-        this.errorMessages = []
-        this.formHasErrors = false
-
-        Object.keys(this.form).forEach(f => {
-          this.$refs[f].reset()
-        })
-      },
-      submit () {
-        this.formHasErrors = false
-
-        Object.keys(this.form).forEach(f => {
-          if (!this.form[f]) this.formHasErrors = true
-
-          this.$refs[f].validate(true)
-        })
-      },
-    },
-
-
-    beforeCreate() {
-        console.log('beforeCreate')
-    },
-    created() {
-        console.log('created')
-    },
-    beforeMount() {
-        console.log('beforeMount')
-    },
-    mounted() {
-        console.log('mounted')
-    },
-    beforeDestroyed() {
-        console.log('beforeDestroyed')
-    },
-    destroyed() {
-        console.log('destroyed')
-    },
-    
 }
 </script>
-       
-<style>
-
-</style>
