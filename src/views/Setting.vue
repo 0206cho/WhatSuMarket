@@ -20,7 +20,7 @@
                             </v-text-field>
                             <v-text-field label="전화번호" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
                             </v-text-field>
-                            <v-text-field label="e-mail" prepend-inner-icon="fa-reqular fa-envelope" color="#008037">
+                            <v-text-field label="이메일" prepend-inner-icon="fa-reqular fa-envelope" color="#008037">
                             </v-text-field>
                             <v-text-field label="주소" prepend-inner-icon="fa-sharp fa-solid fa-location-dot" color="#008037">
                             </v-text-field>
