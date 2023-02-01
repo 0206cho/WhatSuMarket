@@ -2,7 +2,7 @@
   <div id="app">
     <v-app>
       <app-bar />
-      <drawer />
+      <!-- <drawer /> -->
       <core-view />
       <core-footer />
     </v-app>
