@@ -53,7 +53,7 @@ export default [{
     path: '/pwfind',
     view: 'PwFind'
 },{
-    // 마이페이지 - 메인
+    // 로그인 - 아이디찾기
     path: '/idfind',
     view: 'IdFind'
 }
