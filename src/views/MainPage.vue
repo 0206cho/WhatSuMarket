@@ -34,7 +34,7 @@
             </v-col>
             <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index" >
               <v-hover v-slot="{ hover }">
-                <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" style="border-radius:25px; border: 1px solid #008037">
+                <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
                   <v-img height="200" :src="`https://picsum.photos/${index}00/300`"></v-img>
 
                   <v-card-title class="pb-1">{{ product.title }}</v-card-title>
