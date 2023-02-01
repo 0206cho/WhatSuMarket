@@ -48,6 +48,14 @@ export default [{
     // 마이페이지 - 메인
     path: '/mypage',
     view: 'Mypage'
+},{
+    // 로그인 - 비밀번호찾기
+    path: '/pwfind',
+    view: 'PwFind'
+},{
+    // 마이페이지 - 메인
+    path: '/idfind',
+    view: 'IdFind'
 }
 
 ]
