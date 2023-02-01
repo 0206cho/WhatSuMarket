@@ -3,34 +3,40 @@
   <v-container fluid fill-height>
     <v-row justify="center" align="center">
       <v-col cols="6">
-        <v-card>
-          <v-tabs v-model="tab" color="#008037">
-            <v-tab v-for="item in tab_items" :key="item">
-              {{ table[item].title }}
-            </v-tab>
-          </v-tabs>
-          <v-card-text>
-            <v-tabs-items v-model="tab" class="text-center">
-              <v-tab-item v-for="item in tab_items" :key="item">
-                <v-row v-if="item == 'charge'" justify="center" align="center">
-                  <v-col cols="4"> <!--item이 charge인 경우-->
-                    <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
-                      <v-card-actions class="px-10">
-                        <span style="float:left; align-items: center;">10,980냥</span>
-                        <v-spacer></v-spacer>
-                        <v-btn dark color="#008037" style="border-radius: 30px; float: right;" width="30%">충전</v-btn>
-                      </v-card-actions>
-                    </v-card>
-                  </v-col>
-                </v-row>
-                <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center">
-                </v-data-table>
-              </v-tab-item>
-            </v-tabs-items>
-          </v-card-text>
-        </v-card>
+        <v-card elevation="12" style="border-radius:25px; border: 1px solid #008037">
+          <v-img :src="require('../../images/WhatSuWhite.png')" max-height="170" max-width="170" style="margin: 1em auto;" class="mb-0"></v-img>
+          <div style="text-align: center; color:#008037; font-size:xxx-large; font-family: 'KOTRA_BOLD';" class="mt-0">내역</div>
+          <v-card flat class="ma-6 mt-0">
+            <v-tabs v-model="tab" color="#008037">
+              <v-tab v-for="item in tab_items" :key="item">
+                {{ table[item].title }}
+              </v-tab>
+            </v-tabs>
+            <v-card-text>
+              <v-tabs-items v-model="tab" class="text-center">
+                <v-tab-item v-for="item in tab_items" :key="item">
+                  <v-row v-if="item == 'charge'" justify="center" align="center">
+                    <v-col cols="6"> <!--item이 charge인 경우-->
+                      <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
+                        <v-card-actions>
+                          <span class="ml-13" style="align-items: center; font-weight: bold; font-size:medium">10,980냥</span>
+                          <v-spacer></v-spacer>
+                          <v-btn dark color="#008037" style="border-radius: 30px; float: right;">충전</v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-col>
+                  </v-row>
+                  <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center">
+                  </v-data-table>
+                </v-tab-item>
+              </v-tabs-items>
+            </v-card-text>
+          </v-card>
+        
+      </v-card>
       </v-col>
     </v-row>
+  
   </v-container>
 </template>
 <script>

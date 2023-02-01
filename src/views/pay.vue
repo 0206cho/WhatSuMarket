@@ -5,8 +5,9 @@
                 <v-row>
                     <v-col cols="4"></v-col>
                     <v-col cols="4">
-                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="70" max-width="85"
-                            style="margin: 1em auto;"></v-img>
+                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="80" max-width="85"
+                            style="margin: 1em auto; position: relative; top: 1em;"></v-img>
+                        <div style="text-align: center; color:#008037; position: relative; top: 1px; font-size:xx-large; font-family: 'KOTRA_BOLD';">결제</div>
 
                         <v-card width="400" height="140" style="border-radius:1em; border: 1px solid #008037">
                             <v-app-bar height="40" dark color="#008037">
