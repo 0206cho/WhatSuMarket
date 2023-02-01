@@ -10,7 +10,7 @@
                           style="margin: 1em auto;"></v-img>
                           <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">회원가입</div>
                       <v-card-text class="pt-6 pb-0 mb-0">
-                          <v-text-field label="아이디" prepend-inner-icon="mdi-account" color="#008037">
+                          <v-text-field label="ID" prepend-inner-icon="mdi-account" color="#008037">
                           </v-text-field>
                           <v-text-field label="비밀번호" type="password" prepend-inner-icon="mdi-lock"
                               color="#008037">

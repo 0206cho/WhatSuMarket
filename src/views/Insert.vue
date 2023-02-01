@@ -5,7 +5,7 @@
     <v-layout align-center row wrap>
       <v-row justify="center" align="cener">
           <v-col cols="4">
-            <v-card elevation="12" width="350" height="100%"
+            <v-card elevation="12" width="550" height="100%"
             style="border-radius:25px; border: 1px solid #008037">
             <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110"
                 style="margin: 1em auto;"></v-img>

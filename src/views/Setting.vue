@@ -10,19 +10,19 @@
                             style="margin: 1em auto;"></v-img>
                             <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">설&nbsp;정</div>
                         <v-card-text class="pt-6 pb-0 mb-0">
-                            <v-text-field label="Name" prepend-inner-icon="mdi-account" color="#008037">
+                            <v-text-field label="ID" prepend-inner-icon="mdi-account" color="#008037">
                             </v-text-field>
-                            <v-text-field label="Password" type="password" prepend-inner-icon="mdi-lock"
+                            <v-text-field label="비밀번호" type="password" prepend-inner-icon="mdi-lock"
                                 color="#008037">
                             </v-text-field>
-                            <v-text-field label="Confirm Password" type="password" prepend-inner-icon="mdi-lock"
+                            <v-text-field label="비밀번호 재확인" type="password" prepend-inner-icon="mdi-lock"
                                 color="#008037">
                             </v-text-field>
-                            <v-text-field label="Mobile" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
+                            <v-text-field label="전화번호" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
                             </v-text-field>
-                            <v-text-field label="e-mail" prepend-inner-icon="fa-reqular fa-envelope" color="#008037">
+                            <v-text-field label="이메일" prepend-inner-icon="fa-reqular fa-envelope" color="#008037">
                             </v-text-field>
-                            <v-text-field label="Address" prepend-inner-icon="fa-sharp fa-solid fa-location-dot" color="#008037">
+                            <v-text-field label="주소" prepend-inner-icon="fa-sharp fa-solid fa-location-dot" color="#008037">
                             </v-text-field>
                         </v-card-text>
                         <v-card-actions class="mx-2 mb-5">
