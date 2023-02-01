@@ -1,184 +1,41 @@
 <template>
-    <!-- 템플릿안에 컨테이너가 있어야함 -->
-    <v-container fluid  fill-height>
-        <v-row justify="center">
-            <v-col
-              cols="10"
-              sm="8"
-              md="6"
-              lg="4"
-            > 회원가입
-              <v-card ref="form">
-                <v-card-text>
-                  <v-text-field
-                    ref="name"
-                    v-model="name"
-                    :rules="[() => !!name || '아이디를 입력하세요']"
-                    :error-messages="errorMessages"
-                    label="아이디"
-                    placeholder="ex)WhatSu"
-                    required
-                  ></v-text-field>
-
-                  <v-text-field
-                    ref="password"
-                    v-model="password"
-                    :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                    :rules="[rules.required, rules.range]"
-                    :type="show1 ? 'text' : 'password'"
-                    name="input-10-1"
-                    label="비밀번호"
-                    
-                    counter
-                    @click:append="show1 = !show1"
-                  ></v-text-field>
-
-                  <v-text-field
-                    ref="password"
-                    v-model="password2"
-                    :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-                    :rules="[rules.required, rules.range, rules.check]"
-                    :type="show1 ? 'text' : 'password'"
-                    name="input-10-1"
-                    label="비밀번호 재확인"
-                    
-                    counter
-                    @click:append="show1 = !show1"
-                  ></v-text-field>
-
-                  <v-text-field
-                    ref="phone"
-                    v-model="phone"
-                    :rules="[() => !!phone || '전화번호를 입력하세요']"
-                    :error-messages="errorMessages"
-                    label="전화번호"
-                    placeholder="ex)010-1234-5678"
-                    required
-                  ></v-text-field>
-
-                </v-card-text>
-                <v-divider class="mt-12"></v-divider>
-                <v-card-actions>
-                  <v-btn text>
-                    취소
-                  </v-btn>
-                  <v-spacer></v-spacer>
-                  <v-slide-x-reverse-transition>
-                    <v-tooltip
-                      v-if="formHasErrors"
-                      left
-                    >
-                      <template v-slot:activator="{ on, attrs }">
-                        <v-btn
-                          icon
-                          class="my-0"
-                          v-bind="attrs"
-                          @click="resetForm"
-                          v-on="on"
-                        >
-                          <v-icon>mdi-refresh</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>지우기</span>
-                    </v-tooltip>
-                  </v-slide-x-reverse-transition>
-                  <v-btn
-                    color="primary"
-                    text
-                    @click="submit"
-                  >
-                    확인
-                  </v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-col>
+  <v-container style="max-width:1300px" fill-height>
+      <v-layout align-center row wrap>
+          <v-row>
+              <v-col cols="4"></v-col>
+              <v-col cols="4">
+                  <v-card elevation="12" width="350" height="100%"
+                      style="border-radius:25px; border: 1px solid #008037">
+                      <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110"
+                          style="margin: 1em auto;"></v-img>
+                          <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">회원가입</div>
+                      <v-card-text class="pt-6 pb-0 mb-0">
+                          <v-text-field label="아이디" prepend-inner-icon="mdi-account" color="#008037">
+                          </v-text-field>
+                          <v-text-field label="비밀번호" type="password" prepend-inner-icon="mdi-lock"
+                              color="#008037">
+                          </v-text-field>
+                          <v-text-field label="비밀번호 재확인" type="password" prepend-inner-icon="mdi-lock"
+                              color="#008037">
+                          </v-text-field>
+                          <v-text-field label="전화번호" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
+                          </v-text-field>
+                          
+                      </v-card-text>
+                      <v-card-actions class="mx-2 mb-5">
+                          <v-spacer></v-spacer>
+                              <v-btn dark color="#008037" style="border-radius: 30px;" width="50%">확인</v-btn>
+                              <v-btn dark color="#6B8A78" style="border-radius: 30px;" width="50%">취소</v-btn>
+                              <v-spacer></v-spacer>
+                      </v-card-actions>
+                  </v-card>
+              </v-col>
           </v-row>
-    </v-container>
-
+      </v-layout>
+  </v-container>
 </template>
 <script>
 export default {
-    name: "Signup",
-    data () {
-      return {
-        show1: false,
-       
-        password: '',
-        password2: '',
-        rules: {
-          required: value => !!value || '비밀번호를 입력하세요',
-          range: v => /^[a-zA-Z0-9]{8,12}$/.test(v) || '8자리 이상 12자리까지 입력하세요',
-          check: v => v==this.password || '비밀번호가 일치하지 않습니다'
-        },
-      errorMessages: '',
-      
-      name: null,
-      phone: null,
-    
-      formHasErrors: false,
-      }
-    },
-    computed: {
-      form () {
-        return {
-          name: this.name,
-          phone: this.phone,
-          
-        }
-      },
-    },
-
-    watch: {
-      name () {
-        this.errorMessages = ''
-      }
-     
-    },
-
-    methods: {
-
-      resetForm () {
-        this.errorMessages = []
-        this.formHasErrors = false
-
-        Object.keys(this.form).forEach(f => {
-          this.$refs[f].reset()
-        })
-      },
-      submit () {
-        this.formHasErrors = false
-
-        Object.keys(this.form).forEach(f => {
-          if (!this.form[f]) this.formHasErrors = true
-
-          this.$refs[f].validate(true)
-        })
-      },
-    },
-
-
-    beforeCreate() {
-        console.log('beforeCreate')
-    },
-    created() {
-        console.log('created')
-    },
-    beforeMount() {
-        console.log('beforeMount')
-    },
-    mounted() {
-        console.log('mounted')
-    },
-    beforeDestroyed() {
-        console.log('beforeDestroyed')
-    },
-    destroyed() {
-        console.log('destroyed')
-    },
-    
+  name: "Signup",
 }
 </script>
-       
-<style>
-
-</style>
