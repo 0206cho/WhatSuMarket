@@ -29,10 +29,6 @@ export default [{
     path: '/mypage/setting',
     view: 'Setting'
 },{
-    // 마이페이지 - 충전내역
-    path: '/mypage/point',
-    view: 'Point'
-},{
     // 결제페이지
     path: '/pay',
     view: 'Pay'
@@ -44,10 +40,6 @@ export default [{
     // 마이페이지 - 내역
     path: '/mypage/history',
     view: 'History'
-},{
-    // 마이페이지 - 메인
-    path: '/mypage',
-    view: 'Mypage'
 },{
     // 로그인 - 비밀번호찾기
     path: '/pwfind',

@@ -2,7 +2,7 @@
 <template>
     <v-container fluid fill-height>
         <v-row justify="center" align="center">
-            <v-col cols="6">
+            <v-col cols="4">
                 <!--이미지 캐러셀-->
                     <v-carousel color="primary" style="border-radius: 20px;" hide-delimiter-background
                         show-arrows-on-hover>
