@@ -12,12 +12,12 @@
                       <v-card-text class="pt-6 pb-0 mb-0">
                           <v-text-field label="ID" prepend-inner-icon="mdi-account" color="#008037">
                           </v-text-field>
-                          <v-text-field label="Mobile" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
+                          <v-text-field label="전화번호" prepend-inner-icon="fa-solid fa-mobile-screen-button" color="#008037">
                           </v-text-field>
                          
                           <v-card-actions class="mx-2 mb-5">
                             <v-spacer></v-spacer>
-                                <v-btn color="" style="border-radius: 30px;" width="50%">인증하기</v-btn>
+                                <v-btn style="border-radius:25px; border: 1px solid #008037" width="100%">인증하기</v-btn>
                                 <v-spacer></v-spacer>
                         </v-card-actions>
                          
