@@ -5,7 +5,7 @@
       <v-col cols="6">
         <v-card elevation="12" style="border-radius:25px; border: 1px solid #008037">
           <v-img :src="require('../../images/WhatSuWhite.png')" max-height="170" max-width="170" style="margin: 1em auto;" class="mb-0"></v-img>
-          <div style="text-align: center; color:#008037; font-size:xxx-large; font-family: 'KOTRA_BOLD';" class="mt-0">내역</div>
+          <div style="text-align: center; color:#008037; font-size:xxx-large; font-family:'KOTRA_BOLD';" class="mt-0">내역</div>
           <v-card flat class="ma-6 mt-0">
             <v-tabs v-model="tab" color="#008037">
               <v-tab v-for="item in tab_items" :key="item">

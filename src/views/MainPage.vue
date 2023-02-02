@@ -1,5 +1,5 @@
 <template>
-    <v-container style="width: 100%;" fluid fill-height>
+    <v-container style="width: 100%;" fluid fill-height class="pb-12">
         <v-row style="display: flex; justify-content: center;" class="pb-8">
             <v-col cols="12" style="background-color: #D2E9DC; height: 600px;" class="pb-12 mb-12">
                 <v-row justify="center" align="center" style="height: 100%;">
@@ -47,9 +47,15 @@
                 </v-card-text>
                 </v-card>
               </v-hover>
+              
             </v-col>
+            
         </v-row>
-    
+        <v-row>
+        <v-spacer></v-spacer>
+        <v-btn to="/list" text color="#008037" style="font-family:'KOTRA_BOLD'; font-size: x-large;">더 볼래유?</v-btn>
+        <v-spacer></v-spacer>
+    </v-row>
     </v-container>
 </template>
 
