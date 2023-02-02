@@ -26,7 +26,10 @@
                       </v-card>
                     </v-col>
                   </v-row>
-                  <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center">
+                  <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center" 
+                  :footer-props="{
+                    'items-per-page-text': '페이지 당 보일 개수',
+                  }">
                   </v-data-table>
                 </v-tab-item>
               </v-tabs-items>
