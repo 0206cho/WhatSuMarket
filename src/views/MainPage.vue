@@ -53,7 +53,7 @@
         </v-row> 
         <v-row>
         <v-spacer></v-spacer>
-        <v-btn to="/list" text color="#0080378" style="font-family:'KOTRA_BOLD'; font-size: x-large;">더 볼래유?</v-btn>
+        <v-btn to="/list" text color="#008037" style="font-family:'KOTRA_BOLD'; font-size: x-large;">더 볼래유?</v-btn>
         <v-spacer></v-spacer>
     </v-row>
     </v-container>
