@@ -12,11 +12,11 @@
                         <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110" style="margin: 1em auto;" class="mb-0"></v-img>
                         <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">로그인</div>
                         <v-card-text class="pt-3 pb-0 mb-0">
-                            <v-text-field  label="ID" prepend-inner-icon="mdi-account" color="#008037">
+                            <v-text-field  label="아이디" prepend-inner-icon="mdi-account" color="#008037">
     
                             </v-text-field>
     
-                            <v-text-field label="PASSWORD" type="password" prepend-inner-icon="mdi-lock" color="#008037">
+                            <v-text-field label="비밀번호" type="password" prepend-inner-icon="mdi-lock" color="#008037">
     
                             </v-text-field>
                         </v-card-text>
@@ -30,12 +30,12 @@
 
                         <v-card-actions>
                             <v-btn style="border-radius: 30px;" elevation="2" type="submit" color="#008037" text-capitalize depressed block dark>
-                                login
+                                로그인
                             </v-btn>
                         </v-card-actions>
                         <v-card-actions>
                             <v-btn style="border-radius: 30px;" elevation="2" type="submit" color="#008037" text-capitalize depressed block dark>
-                                sign up
+                                회원가입
                             </v-btn>
                         </v-card-actions>
                             
