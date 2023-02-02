@@ -48,6 +48,10 @@ export default [{
     // 로그인 - 아이디찾기
     path: '/idfind',
     view: 'IdFind'
+},{
+    // 상품 목록
+    path: '/list',
+    view: 'List'
 }
 
 ]

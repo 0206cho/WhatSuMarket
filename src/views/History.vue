@@ -12,8 +12,8 @@
                 {{ table[item].title }}
               </v-tab>
             </v-tabs>
-            <v-card-text>
-              <v-tabs-items v-model="tab" class="text-center">
+            <v-card-text justify="center" align="center">
+              <v-tabs-items v-model="tab" class="text-center" >
                 <v-tab-item v-for="item in tab_items" :key="item">
                   <v-row v-if="item == 'charge'" justify="center" align="center">
                     <v-col cols="6"> <!--item이 charge인 경우-->
