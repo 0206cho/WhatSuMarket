@@ -11,10 +11,10 @@
                 style="margin: 1em auto;"></v-img>
                 <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">상품등록</div>
                   <v-card-text>
-                      <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp" prepend-icon="mdi-camera" label="사진등록"></v-file-input>
-                      <v-text-field label="상품명" single-line></v-text-field>
-                      <v-text-field label="가격" single-line></v-text-field>
-                      <v-textarea name="input-7-1" label="상세설명" value="" hint=""></v-textarea>
+                      <v-file-input :rules="rules" accept="image/png, image/jpeg, image/bmp" color="#008037" prepend-icon="mdi-camera" label="사진등록"></v-file-input>
+                      <v-text-field color="#008037" label="상품명" single-line></v-text-field>
+                      <v-text-field color="#008037" label="가격" single-line></v-text-field>
+                      <v-textarea color="#008037" name="input-7-1" label="상세설명" value="" hint=""></v-textarea>
                   </v-card-text>
                   <v-card-actions class="mx-2 mb-5">
                     <v-spacer></v-spacer>
