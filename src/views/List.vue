@@ -1,35 +1,36 @@
 <template>
-    <v-container style="width: 100%;" fluid fill-height>
+    <v-container style="height=100%; width: 100%;" class="px-16">
+        <h1 style="display: flex; justify-content: center; font-weight: bold;">중고거래 인기매물</h1> <br>
         <v-row style="display: flex; justify-content: center;" class="pb-8">
-            <v-col cols="12" style="background-color: #D2E9DC; height: 600px;" class="pb-12 mb-12">
-                <v-row justify="center" align="center" style="height: 100%;">
-                    <v-col cols="2"></v-col>
-                    <v-col cols="4">
-                        <v-card flat style="background-color: #D2E9DC;">
-                            <v-card-text  style="font-family: 'KOTRA_BOLD'; color:#008037; font-size: 35px;  height: 100%;">
-                            
-                                <p class="py-2">이번 달,</p>
-                                <p class="pb-12">당신이 사용하지 않은 물건은 몇 개?</p>
-        
-                                <p class="">물건을 맡기는 것만으로도</p>
-                                <p class="pb-8">수익을 낼 수 있다면?</p>
-        
-                                <p>왓슈로 와유~</p>
-                                
-                            </v-card-text>
-                        
-                        </v-card>
-                    </v-col>
-                    <v-col cols="3">
-                        <v-img :src="require('../../images/WhatSuWhite.png')" max-height="300" max-width="300"
-                            ></v-img>
-                    </v-col>
-                    <v-col cols="1"></v-col>
-                </v-row>
-                
-            </v-col>
-            <v-col cols="12" class="py-12">
-                <p class="text-center" style="font-family: 'KOTRA_BOLD'; color:#008037; font-size: 55px;">잘 나가유~</p>
+            <v-col cols="12" class="py-3">
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn color="green" outlined to="/signup">
+                        회원가입페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/login">
+                        로그인페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/insert">
+                        상품 등록페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/detail">
+                        상품 상세페이지
+                    </v-btn>
+                    <v-btn to="/pay" color="green" outlined>
+                        결제페이지
+                    </v-btn>
+                    <v-btn color="green" outlined to="/mypage/setting">
+                        마이페이지 - 설정
+                    </v-btn>
+                    <v-btn color="green" outlined to="/mypage/point">
+                        마이페이지 - 충전
+                    </v-btn>
+                    <v-btn color="green" outlined to="/mypage/history">
+                        마이페이지 - 내역
+                    </v-btn>
+                    <v-spacer></v-spacer>
+                </v-card-actions>
             </v-col>
             <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index" >
               <v-hover v-slot="{ hover }">
@@ -55,7 +56,7 @@
 
 <script>
 export default {
-    name: "MainPage",
+    name: "List",
     data: () => ({
         products: [{
                 title: 'eu pede',

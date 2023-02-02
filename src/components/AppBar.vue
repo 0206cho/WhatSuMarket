@@ -5,16 +5,18 @@
         </v-toolbar-title>
       </v-app-bar> -->
   <v-app-bar absolute app light style="background-color: white;">
-    <v-toolbar-title style="cursor: pointer;">
+    <v-toolbar-title class="pl-12 ml-12" style="cursor: pointer;">
       <v-img :src="require('../../images/WhatSuLogo.png')" class="ms-12" style="width: 110px;" @click="main"></v-img>
     </v-toolbar-title>
     <v-toolbar-items>
-      <v-btn text color="#008037" style="font-family:'KOTRA_BOLD';">사던지 말던지</v-btn>
+      <v-btn to="/list" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">사던지 말던지</v-btn>
+      <v-btn to="/insert" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">팔던지 말던지</v-btn>
+      <v-btn to="/" class="px-6" text color="#008037" style="font-family:'KOTRA_BOLD';">궁금해유?</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-menu offset-y>
       <template v-slot:activator="{ attrs, on }">
-        <v-avatar color="#008037" size="40" style="cursor: pointer;" v-bind="attrs" v-on="on">
+        <v-avatar color="#008037" size="40" style="cursor: pointer;" v-bind="attrs" v-on="on" class="mr-12">
           <v-icon dark>fa-solid fa-paw</v-icon>
         </v-avatar>
       </template>

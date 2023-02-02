@@ -6,17 +6,17 @@
         <v-card elevation="12" style="border-radius:25px; border: 1px solid #008037">
           <v-img :src="require('../../images/WhatSuWhite.png')" max-height="170" max-width="170" style="margin: 1em auto;" class="mb-0"></v-img>
           <div style="text-align: center; color:#008037; font-size:xxx-large; font-family: 'KOTRA_BOLD';" class="mt-0">내역</div>
-          <v-card flat class="ma-6 mt-0" >
+          <v-card flat class="ma-6 mt-0">
             <v-tabs v-model="tab" color="#008037">
               <v-tab v-for="item in tab_items" :key="item">
                 {{ table[item].title }}
               </v-tab>
             </v-tabs>
-            <v-card-text >
-              <v-tabs-items v-model="tab" class="text-center">
+            <v-card-text justify="center" align="center">
+              <v-tabs-items v-model="tab" class="text-center" >
                 <v-tab-item v-for="item in tab_items" :key="item">
                   <v-row v-if="item == 'charge'" justify="center" align="center">
-                    <v-col cols="6" style="text-align: center;"> <!--item이 charge인 경우-->
+                    <v-col cols="6"> <!--item이 charge인 경우-->
                       <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
                         <v-card-actions>
                           <span class="ml-13" style="align-items: center; font-weight: bold; font-size:medium">10,980냥</span>
@@ -26,7 +26,10 @@
                       </v-card>
                     </v-col>
                   </v-row>
-                  <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center" style="text-align: center;">
+                  <v-data-table :headers="table[item].headers" :items="table[item].values" class="text-center" 
+                  :footer-props="{
+                    'items-per-page-text': '페이지 당 보일 개수',
+                  }">
                   </v-data-table>
                 </v-tab-item>
               </v-tabs-items>
