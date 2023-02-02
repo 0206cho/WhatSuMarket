@@ -8,7 +8,7 @@
                 <v-col cols="4"></v-col>
     
                 <v-col cols="4">
-                    <v-card elevation="12" width="350" height="450" style="border-radius:25px; border: 1px solid #008037">
+                    <v-card elevation="12" width="350" height="460" style="border-radius:25px; border: 1px solid #008037">
                         <v-img :src="require('../../images/WhatSuWhite.png')" max-height="110" max-width="110" style="margin: 1em auto;" class="mb-0"></v-img>
                         <div style="text-align: center; color:#008037; font-size:xx-large; font-family: 'KOTRA_BOLD';" class="mt-0">로그인</div>
                         <v-card-text class="pt-3 pb-0 mb-0">
@@ -36,6 +36,7 @@
                         <v-card-actions>
                             <v-btn style="border-radius: 30px;" elevation="2" type="submit" color="#008037" text-capitalize depressed block dark>
                                 회원가입
+
                             </v-btn>
                         </v-card-actions>
                             

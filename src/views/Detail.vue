@@ -29,7 +29,7 @@
                         <v-spacer></v-spacer><!--<v-spacer>옆으로 밀기.-->
                         <v-btn dark color="#008037" style="border-radius: 30px;" class="px-5">채팅하기</v-btn>
                         <!--block : 꽉채우게~-->
-                        <v-btn dark color="#008037" style="border-radius: 30px;" class="px-5">구매하기</v-btn>
+                        <v-btn dark color="#6B8A78" style="border-radius: 30px;" class="px-5">구매하기</v-btn>
                         <!--block : 꽉채우게~-->
                     </v-card-actions>
                 </v-card>

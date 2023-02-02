@@ -3,7 +3,7 @@
 
   <v-container style="max-width:1300px"  fill-height>
     <v-layout align-center row wrap>
-      <v-row justify="center" align="cener">
+      <v-row justify="center" align="center">
           <v-col cols="4">
             <v-card elevation="12" width="550" height="100%"
             style="border-radius:25px; border: 1px solid #008037">
