@@ -9,7 +9,7 @@
       <v-img :src="require('../../images/WhatSuLogo.png')" class="ms-12" style="width: 110px;" @click="main"></v-img>
     </v-toolbar-title>
     <v-toolbar-items>
-      <v-btn to="/list" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">사던지 말던지</v-btn>
+<v-btn to="/list" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">사던지 말던지</v-btn>      
       <v-btn to="/insert" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">팔던지 말던지</v-btn>
       <v-btn to="/" class="px-6" text color="#008037" style="font-family:'KOTRA_BOLD';">궁금해유?</v-btn>
     </v-toolbar-items>
