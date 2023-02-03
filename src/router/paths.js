@@ -52,6 +52,10 @@ export default [{
     // 상품 목록
     path: '/list',
     view: 'List'
+},{
+    // 에러페이지
+    path: '/error',
+    view: 'ErrorPage'
 }
 
 ]

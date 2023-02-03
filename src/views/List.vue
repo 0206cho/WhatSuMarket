@@ -1,37 +1,7 @@
 <template>
     <v-container style="height=100%; width: 100%;" class="px-16">
-        <h1 style="display: flex; justify-content: center; font-weight: bold;">중고거래 인기매물</h1> <br>
+        <h1 class="py-12" style="display: flex; justify-content: center; font-weight:bold; color:#008037; font-family:'KOTRA_BOLD';">사던지 말던지</h1> <br>
         <v-row style="display: flex; justify-content: center;" class="pb-8">
-            <v-col cols="12" class="py-3">
-                <v-card-actions>
-                    <v-spacer></v-spacer>
-                    <v-btn color="green" outlined to="/signup">
-                        회원가입페이지
-                    </v-btn>
-                    <v-btn color="green" outlined to="/login">
-                        로그인페이지
-                    </v-btn>
-                    <v-btn color="green" outlined to="/insert">
-                        상품 등록페이지
-                    </v-btn>
-                    <v-btn color="green" outlined to="/detail">
-                        상품 상세페이지
-                    </v-btn>
-                    <v-btn to="/pay" color="green" outlined>
-                        결제페이지
-                    </v-btn>
-                    <v-btn color="green" outlined to="/mypage/setting">
-                        마이페이지 - 설정
-                    </v-btn>
-                    <v-btn color="green" outlined to="/mypage/point">
-                        마이페이지 - 충전
-                    </v-btn>
-                    <v-btn color="green" outlined to="/mypage/history">
-                        마이페이지 - 내역
-                    </v-btn>
-                    <v-spacer></v-spacer>
-                </v-card-actions>
-            </v-col>
             <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index" >
               <v-hover v-slot="{ hover }">
                 <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
