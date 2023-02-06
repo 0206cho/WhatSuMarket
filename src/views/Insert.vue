@@ -39,12 +39,12 @@ export default {
   }),
   methods: {
     onClickSend: function () {
-      const formData = new FormData()
-      for (let i = 0; i < this.files.length; i++) {
-        formData.append('files', this.files[i])
-      }
-      formData.append('request', new Blob([JSON.stringify(this.sell_product)]))
-      console.dir(formData)
+      // const formData = new FormData()
+      // for (let i = 0; i < this.files.length; i++) {
+      //   formData.append('files', this.files[i])
+      // }
+      // formData.append('request', new Blob([JSON.stringify(this.sell_product)]))
+      console.dir(this.sell_product)
     },
     onClickCancel: function () {
       this.sell_product = {
