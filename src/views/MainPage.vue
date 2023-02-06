@@ -26,30 +26,37 @@
                     </v-col>
                     <v-col cols="1"></v-col>
                 </v-row>
-                
             </v-col>
             <v-col cols="12" class="py-12">
                 <p class="text-center" style="font-family: 'KOTRA_BOLD'; color:#008037; font-size: 55px;">잘 나가유~</p>
             </v-col>
-            <v-col cols="3" class="mx-4" v-for="(product, index) in products" :key="index" >
-              <v-hover v-slot="{ hover }">
-                <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
-                  <v-img height="200" :src="`https://picsum.photos/${index}00/300`"></v-img>
+          <v-col cols="12">
+            <v-container>
+              <v-data-iterator :items="products" :items-per-page="6" hide-default-footer>
+                <template v-slot:default="props">
+                  <v-row>
+                    <v-col cols="4" v-for="(product, index) in props.items" :key="index" class="mb-3">
+                      <v-hover v-slot="{ hover }">
+                        <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
+                          <v-img height="200" :src="`https://picsum.photos/${index}00/300`"></v-img>
 
-                  <v-card-title class="pb-1">{{ product.title }}</v-card-title>
+                          <v-card-title class="pb-1">{{ product.title }}</v-card-title>
 
-                  <v-card-text class="pb-1">
-                    <div class="black--text" style="font-weight: bold;">
-                        {{product.price.toLocaleString()}}원
-                    </div>
+                          <v-card-text class="pb-1">
+                            <div class="black--text" style="font-weight: bold;">
+                              {{product.price.toLocaleString()}}원
+                            </div>
 
-                    <div class="pt-3" style="color:#008037">관심 {{ product.favorite }} &nbsp;| &nbsp; 채팅 {{ product.chat }}</div>
-                </v-card-text>
-                </v-card>
-              </v-hover>
-              
-            </v-col>
-            
+                            <div class="pt-3" style="color:#008037">관심 {{ product.favorite }} &nbsp;| &nbsp; 채팅 {{ product.chat }}</div>
+                          </v-card-text>
+                        </v-card>
+                      </v-hover>
+                    </v-col>
+                  </v-row>
+                </template>
+              </v-data-iterator>
+            </v-container>
+          </v-col>
         </v-row> 
         <v-row>
         <v-spacer></v-spacer>
