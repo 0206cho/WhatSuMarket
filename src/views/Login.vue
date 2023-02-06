@@ -34,7 +34,8 @@
                             </v-btn>
                         </v-card-actions>
                         <v-card-actions>
-                            <v-btn style="border-radius: 30px;" elevation="2" type="submit" color="#008037" text-capitalize depressed block dark>
+                            
+                            <v-btn style="border-radius:30px; border: 1px solid #008037" elevation="2" type="submit"  text-capitalize depressed block>
                                 회원가입
 
                             </v-btn>
