@@ -1,0 +1,116 @@
+<template>
+    <v-container style="max-width:1300px" fill-height>
+      <v-row justify="center" align="center">
+        <v-col cols="4">
+          <v-card align="center" elevation="12"
+                  style="border-radius:25px; border: 1px solid #008037">
+
+            <v-img :src="require('../../images/WhatSuWhite.png')" max-height="100" max-width="95"
+                   style="margin: 1em auto; bottom: 2px;"></v-img>
+            <div
+                style="text-align: center; color:#008037; position: relative; bottom: 15px; font-size:xx-large; font-family: 'KOTRA_BOLD';">
+              결제</div>
+
+            <v-card height="140" style="border-radius:1em; border: 1px solid #008037" class="mx-2 mb-10">
+              <v-app-bar height="40" color="#d2e9dc">
+                <v-icon style="color: #008037;">mdi-account-circle</v-icon>
+                <v-toolbar-title style="color: #008037;"
+                                 class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문 상품
+                  정보</v-toolbar-title>
+              </v-app-bar>
+              <v-img :src="require('../../images/iphone.png')" max-height="150" max-width="100"
+                     style="float:left; left: 1em; top: 11px;"></v-img>
+
+              <p style="position: relative; right:25px; top:13px;" class="subtitle-1 font-weight-bold"> 상품
+                :
+                아이폰
+                14 pro 미개봉</p>
+              <p style="position: relative; right:69px; bottom:2px;" class="caption font-weight-bold"> 가격
+                :
+                2,000,000원</p>
+              <p style="position: relative; right:3em; bottom:1.3em;" class="caption font-weight-bold">
+                수량 : 총 1개</p>
+
+
+            </v-card>
+            <v-card height="390" class="mx-2 mb-10" style="border-radius:1em; border: 1px solid #008037;">
+              <v-app-bar height="40" color="#d2e9dc">
+                <v-icon style="color: #008037;">mdi-magnify</v-icon>
+
+                <v-toolbar-title prepend-inner-icon="fa-light fa-coin" style="color: #008037;"
+                                 class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문/배송
+                  정보</v-toolbar-title>
+              </v-app-bar>
+              <p></p>
+
+              <v-form>
+                <p style="position: relative; right:12em"
+                   class=" font-weight-bold caption mt-1 ml-4 pl-0">1. 주문자 정보</p>
+
+                <v-card-text>
+                  <v-text-field style=" max-width: 22.55em; bottom:3ex" class="shrink mx-4" dense
+                                label="이름" color="#008037" outlined clearable></v-text-field>
+                  <v-text-field style=" max-width: 22.55em; bottom:2.5em" class="shrink mx-4"
+                                dense label="전화번호" color="#008037" outlined clearable></v-text-field>
+                  <p style="position: relative; right:11em; bottom:4.5em"
+                     class="font-weight-bold caption">2. 배송지 정보</p>
+                  <v-text-field style="max-width: 22.55em; bottom:4em" class="shrink mx-4" dense
+                                label="주소" color="#008037" outlined clearable></v-text-field>
+                  <v-text-field style="max-width: 22.55em; bottom:5em" class="shrink mx-4" dense
+                                label="상세주소" color="#008037" outlined clearable></v-text-field>
+                </v-card-text>
+                <!-- <v-text-field style="max-width: 22.55em; bottom:3.2cm" class="shrink mx-4" dense
+                label="request" color="#008037" outlined clearable></v-text-field> -->
+                <v-card-text class="shrink mx-4" dense
+                             style="position: relative; bottom: 9em; max-width: 25.55em;">
+                  <v-select outlined color="#008037" :items="['부재 시 경비실에 맡겨주세요.',
+                                        '부재 시 경비실에 맡겨주세요.',
+                                        '부재 시 택배함에 맡겨주세요.',
+                                        '부재 시 집 앞에 맡겨주세요.',
+                                        '배송 전 연락 바랍니다.',
+                                        '파손의 위험이 있는 상품입니다. 배송 시 주의해 주세요.',
+                                        '직접 입력']" label="직접 입력">
+
+                  </v-select>
+                </v-card-text>
+              </v-form>
+            </v-card>
+            <v-card height="240" class="mx-2 mb-5" style="border-radius:1em; border: 1px solid #008037;">
+
+              <v-app-bar height="40" color="#d2e9dc">
+                <v-icon style="color: #008037;">mdi-star</v-icon>
+
+                <v-toolbar-title prepend-inner-icon="fa-light fa-coin" style="color: #008037;"
+                                 class="font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;캐쉬/포인트</v-toolbar-title>
+              </v-app-bar>
+
+              <p></p>
+              <p style="position: relative; right: 12.5em;" class="font-weight-bold caption">
+                1. 캐쉬</p>
+              <v-text-field style="max-width: 17em; bottom: 5px; right: 1.5em" class="shrink mx-4"
+                            dense label="cash" color="#008037" outlined clearable></v-text-field>
+              <v-card-actions>
+                <v-btn color="#008037" dark style="left: 22em; bottom:5.5em">
+                  <v-icon>mdi-checkbox-marked-circle</v-icon>
+                </v-btn>
+              </v-card-actions>
+              <p style="position: relative; bottom: 6.2em; right: 12.5em;"
+                 class=" font-weight-bold caption mt-1 ml-3 pl-0">2. 포인트</p>
+              <v-text-field style="max-width: 17em; bottom: 5em; right: 1.5em" class="shrink mx-4"
+                            dense label="point" color="#008037" outlined clearable></v-text-field>
+              <v-card-actions>
+                <v-btn color="#008037" dark style="left: 22em; bottom:10.8em">
+                  <v-icon>mdi-checkbox-marked-circle</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+</template>
+<script>
+export default {
+    name: "Pay",
+}
+</script>

@@ -9,7 +9,7 @@
                             <v-card-text  style="font-family: 'KOTRA_BOLD'; color:#008037; font-size: 35px;  height: 100%;">
                             
                                 <p class="py-2">이번 달,</p>
-                                <p class="pb-12">당신이 사용하지 않은 물건은 몇 개?</p>
+                                <p class="pb-12" style="line-height: 40px;">당신이 사용하지 않은 물건은 몇 개?</p>
         
                                 <p class="">물건을 맡기는 것만으로도</p>
                                 <p class="pb-8">수익을 낼 수 있다면?</p>
@@ -17,7 +17,6 @@
                                 <p>왓슈로 와유~</p>
                                 
                             </v-card-text>
-                        
                         </v-card>
                     </v-col>
                     <v-col cols="3">

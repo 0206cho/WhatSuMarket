@@ -15,7 +15,7 @@
             <v-card-text justify="center" align="center">
               <v-tabs-items v-model="tab" class="text-center" >
                 <v-tab-item v-for="item in tab_items" :key="item">
-                  <v-row v-if="item == 'charge'" justify="center" align="center">
+                  <v-row v-if="item === 'charge'" justify="center" align="center">
                     <v-col cols="6"> <!--item이 charge인 경우-->
                       <v-card flat class="px-6" style="border-radius:25px; border: 1px solid #008037;">
                         <v-card-actions>
@@ -30,6 +30,11 @@
                   :footer-props="{
                     'items-per-page-text': '페이지 당 보일 개수',
                   }">
+                    <template v-if="item === 'apply'" v-slot:item.status="{ item }">
+                      <v-chip dark :color="getColor(item.status)" class="font-weight-black">
+                        {{ item.status }}
+                      </v-chip>
+                    </template>
                   </v-data-table>
                 </v-tab-item>
               </v-tabs-items>
@@ -55,16 +60,22 @@ export default {
             text: '신청내역',
             value: 'log'
           }, {
+            text: '가격',
+            value: 'price'
+          }, {
+            text: '현황',
+            value: 'status'
+          }, {
             text: '신청날짜',
             value: 'date'
           }],
           'values': [
-            { log: 'sample', date: '2021-33-21' },
-            { log: 'sample', date: '2021-33-21' },
-            { log: 'sample', date: '2021-33-21' },
-            { log: 'sample', date: '2021-33-21' },
-            { log: 'sample', date: '2021-33-21' },
-            { log: 'sample', date: '2021-33-21' },
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'PENDING'},
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'ACCEPT'},
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'REJECT'},
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'REJECT'},
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'ACCEPT'},
+            { log: 'sample', price: 900, date: '2021-33-21', status: 'PENDING' },
           ]
         },
         'payment': {
@@ -106,7 +117,13 @@ export default {
       tab: null,
     }
   },
-
+  methods: {
+    getColor: function (status) {
+      if (status === 'PENDING') return 'green'
+      else if (status === 'REJECT') return 'red'
+      return 'primary'
+    }
+  }
 };
 </script>
 
