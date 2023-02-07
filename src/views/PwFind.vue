@@ -25,7 +25,7 @@
                       <v-card-actions class="mx-2 mb-5">
                           <v-spacer></v-spacer>
                               <v-btn dark color="#008037" style="border-radius: 30px;" width="50%">확인</v-btn>
-                              <v-btn dark color="#6B8A78" style="border-radius: 30px;" width="50%">취소</v-btn>
+                              <v-btn dark color="#6B8A78" style="border-radius: 30px;" width="50%" @click="onClickCancel">취소</v-btn>
                               <v-spacer></v-spacer>
                       </v-card-actions>
                   </v-card>
@@ -44,5 +44,10 @@
   
 export default {
   name: "PwFind",
+  methods: {
+    onClickCancel: function () {
+      this.$router.push('/login')
+    }
+  }
 }
 </script>

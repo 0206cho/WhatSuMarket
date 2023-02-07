@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import sample from '../utils/sample.json'
 const sell_product_schema = {
   id: -1,
   title: '',
@@ -39,6 +40,8 @@ const sell_product_schema = {
     'updated_at': ''
   }]
 }
+
+import _ from 'lodash'
 
 export default {
   name: "SellProducts",
@@ -60,7 +63,33 @@ export default {
       if (status === 'PENDING') return 'green'
       else if (status === 'REJECT') return 'red'
       return 'primary'
+    },
+
+    getRandomState() {
+      const status = ['PENDING', 'REJECT', 'APPROVED']
+      return _.sample(status)
+    },
+
+    getRandomDate() {
+      const start = new Date(2020, 0, 1)
+      const end = new Date()
+      const random_date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()))
+      return `${random_date.getFullYear()}-${random_date.getMonth() + 1}-${random_date.getDay()}`
+    },
+
+    getRandomName() {
+      return _.sample(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'])
     }
+  },
+  created() {
+    this.products = sample.map((s, index) => ({
+      id: index,
+      title: s.title,
+      price: s.price,
+      status: this.getRandomState(),
+      seller: this.getRandomName(),
+      created_at: this.getRandomDate()
+    }))
   }
 }
 </script>

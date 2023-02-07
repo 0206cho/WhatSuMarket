@@ -2,7 +2,7 @@ export default {
     user: {
         username: 'Anonymous',
         token: '',
-        admin: true,
+        admin: false,
     },
     is_login: false,
     sell_products: [],
