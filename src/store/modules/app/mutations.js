@@ -7,5 +7,8 @@ export default {
             token = ''
             router.push(`/${returnPath}`)
         }
+    },
+    [types.SET_CURRENT_PRODUCT](state, product) {
+        state.current_product = product
     }
 }

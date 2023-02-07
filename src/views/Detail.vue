@@ -15,10 +15,10 @@
           <!--flat대신 elevation="0"도 가능-->
           <v-card-title class="pb-1 font-weight-black display-1">{{ product.title }}</v-card-title>
           <v-card-text class="pb-6">
-            <p class="black--text pb-4 font-weight-medium title">{{ product.price.toLocaleString() }}원</p>
+            <p class="black--text pb-4 font-weight-medium title">{{ product.price.toString().toLocaleString() }}원</p>
             <!-- <hr style="border: 0; height: 1px; background: #cccccc"> -->
             <v-divider style="border-color:#008037;"></v-divider>
-            <p v-html="product.context" class="black--text pt-4 font-weight-bold" style="font-weight: bold; line-height: 35px;"></p>
+            <p v-html="product.description" class="black--text pt-4 font-weight-bold" style="font-weight: bold; line-height: 35px;"></p>
             <p class="pb-4" style="color: #008037;"><v-icon small>fa fa-heart</v-icon> <span class="font-weight-medium">{{ product.favorite }}</span> &nbsp;| &nbsp; <v-icon small>fa fa-message</v-icon> <span class="font-weight-medium">{{ product.chat }}</span> </p>
             <v-divider style="border-color:#008037;"></v-divider>
             <!-- <hr style="border: 0; height: 1px; background: #cccccc"> -->
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import * as appx from '../store/modules/app'
 export default {
   name: "Detail",
   // data() {
@@ -71,6 +72,14 @@ export default {
           src: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fcafefiles.naver.net%2FMjAxODAyMDdfNTYg%2FMDAxNTE3OTc1NDAzNzAy.AqD5opPwDo-HL3BTsZubpWTiSuyXUHdWC87naMhLasEg.0Yp15Kn_djgdSoTf3S2l3NxnJLBhbF5kEXbPU99Ipnsg.JPEG.boss4325%2FexternalFile.jpg&type=a340'
         }],
     }
-  })
+  }),
+
+  computed: {
+    ...appx.mapState(['current_product'])
+  },
+
+  beforeMount() {
+    this.product = this.current_product
+  }
 }
 </script>

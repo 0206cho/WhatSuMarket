@@ -7,5 +7,5 @@ export default {
     is_login: false,
     sell_products: [],
     products: [],
-
+    current_product: {}
 }

@@ -36,7 +36,7 @@
                   <v-row>
                     <v-col cols="4" v-for="(product, index) in props.items" :key="index" class="mb-3">
                       <v-hover v-slot="{ hover }">
-                        <v-card @click="detail" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
+                        <v-card @click="detail(product)" :elevation="hover ? 16 : 2" class="mx-auto rounded-lg" width="300" height="320" max-height="320" style="border-radius:25px; border: 1px solid #008037">
                           <v-img height="200" :src="product.img"></v-img>
 
                           <v-card-title class="pb-1">{{ product.title }}</v-card-title>
@@ -66,6 +66,8 @@
 </template>
 
 <script>
+import * as appx from '../store/modules/app'
+import * as app_type from '../store/modules/app/types'
 import _ from 'lodash'
 import sample from '../utils/samplePrdouct.json'
 
@@ -75,18 +77,24 @@ export default {
         products: []
     }),
     methods: {
-        detail :function(){
-            this.$router.push('/detail');
-        }
+      ...appx.mapMutations([
+          app_type.SET_CURRENT_PRODUCT
+      ]),
+      detail :function(product) {
+        this.SET_CURRENT_PRODUCT(product)
+        this.$router.push('/detail');
+      }
     },
   created() {
       const shuffled = _.shuffle(sample).slice(0, 12)
       this.products = shuffled.map(s => ({
         title: s.title,
         price: s.price,
+        description: s.description,
         chat: s.chat,
         favorite: s.like,
-        img: s.images[0]['url']
+        img: s.images[0]['url'],
+        imgs: s.images
       }))
   }
 }
