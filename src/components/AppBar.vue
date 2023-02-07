@@ -1,9 +1,4 @@
 <template>
-  <!-- <v-app-bar absolute app light style="background-color: #008037;">
-        <v-toolbar-title>
-          <v-img :src="require('../../images/WhatSuLogo2.png')" class="ms-8"  style="width: 100px;"></v-img>
-        </v-toolbar-title>
-      </v-app-bar> -->
   <v-app-bar absolute app light style="background-color: white;">
     <v-toolbar-title class="pl-12 ml-12" style="cursor: pointer;">
       <v-img :src="require('../../images/WhatSuLogo.png')" class="ms-12" style="width: 110px;" @click="main"></v-img>
@@ -11,7 +6,8 @@
     <v-toolbar-items>
 <v-btn to="/list" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">사던지 말던지</v-btn>      
       <v-btn to="/insert" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">팔던지 말던지</v-btn>
-      <v-btn to="/" class="px-6" text color="#008037" style="font-family:'KOTRA_BOLD';">궁금해유?</v-btn>
+      <v-btn v-show="user.admin" to="/admin/sell-products" class="pr-6" text color="#008037" style="font-family:'KOTRA_BOLD';">판매 신청 목록</v-btn>
+      <v-btn v-show="!user.admin" to="/" class="px-6" text color="#008037" style="font-family:'KOTRA_BOLD';">궁금해유?</v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
     <v-menu offset-y>
@@ -31,6 +27,7 @@
 
 <script>
 import router from '@/router';
+import * as appx from '.././store/modules/app'
 
 export default {
   name: "AppBar",
@@ -53,8 +50,11 @@ export default {
       'text' : "로그아웃",
        to : '/login'
     },]
-  })
+  }),
 
+  computed: {
+    ...appx.mapState(['user'])
+  }
 }
 </script>
 

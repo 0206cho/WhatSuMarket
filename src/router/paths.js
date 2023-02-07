@@ -56,6 +56,10 @@ export default [{
     // 에러페이지
     path: '/error',
     view: 'ErrorPage'
-}
-
-]
+},{
+    path: '/admin/sell-products',
+    view: 'SellProducts'
+}, {
+    path: '/admin/sell-products/:id',
+    view: 'SellProduct'
+}]
