@@ -6,7 +6,7 @@
         <!--이미지 캐러셀-->
         <v-carousel color="primary" style="border-radius: 20px;" hide-delimiter-background show-arrows-on-hover>
           <!--show-arrows-on-hover : 마우스 가져가면 버튼 활성화, hide-delimiter-background : 하단바x-->
-          <v-carousel-item v-for="(img, i) in product.imgs" :key="i" :src="img.src"
+          <v-carousel-item v-for="(img, i) in product.imgs" :key="i" :lazy-src="img.url"
                            reverse-transition="fade-transition" transition="fade-transition"></v-carousel-item>
         </v-carousel>
 
