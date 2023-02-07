@@ -12,11 +12,11 @@
 
 
           <v-img :src="require('../../images/WhatSuWhite.png')" max-height="100" max-width="95"
-                 style="margin: 1em auto; bottom: 2px;"></v-img>
+            style="margin: 1em auto; bottom: 2px;"></v-img>
 
 
           <div
-              style="text-align: center; color:#008037; position: relative; bottom: 15px; font-size:xx-large; font-family: 'KOTRA_BOLD';">
+            style="text-align: center; color:#008037; position: relative; bottom: 15px; font-size:xx-large; font-family: 'KOTRA_BOLD';">
 
 
             결제
@@ -43,7 +43,7 @@
 
 
             <v-img :src="require('../../images/iphone.png')" max-height="150" max-width="100"
-                   style="float:left; left: 1em; top: 11px;"></v-img>
+              style="float:left; left: 1em; top: 11px;"></v-img>
 
 
             <p style="position: relative; right:25px; top:13px;" class="subtitle-1 font-weight-bold"> 상품 : 아이폰 14 pro
@@ -75,7 +75,7 @@
 
 
               <v-toolbar-title prepend-inner-icon="fa-light fa-coin" style="color: #008037;"
-                               class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문/배송 정보
+                class=" font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;주문/배송 정보
 
 
               </v-toolbar-title>
@@ -97,22 +97,22 @@
 
 
                 <v-text-field v-model="pay.buyer.name" style=" max-width: 22.55em; bottom:3ex" class="shrink mx-4" dense
-                              label="이름" color="#008037" outlined clearable></v-text-field>
+                  label="이름" color="#008037" outlined clearable></v-text-field>
 
 
                 <v-text-field v-model="pay.buyer.phone" style=" max-width: 22.55em; bottom:2.5em" class="shrink mx-4"
-                              dense label="전화번호" color="#008037" outlined clearable></v-text-field>
+                  dense label="전화번호" color="#008037" outlined clearable></v-text-field>
 
 
                 <p style="position: relative; right:11em; bottom:4.5em" class="font-weight-bold caption">2. 배송지 정보</p>
 
 
                 <v-text-field v-model="pay.addressInfo.address" style="max-width: 22.55em; bottom:4em"
-                              class="shrink mx-4" dense label="주소" color="#008037" outlined clearable></v-text-field>
+                  class="shrink mx-4" dense label="주소" color="#008037" outlined clearable></v-text-field>
 
 
                 <v-text-field v-model="pay.addressInfo.addressdetail" style="max-width: 22.55em; bottom:5em"
-                              class="shrink mx-4" dense label="상세주소" color="#008037" outlined clearable></v-text-field>
+                  class="shrink mx-4" dense label="상세주소" color="#008037" outlined clearable></v-text-field>
 
 
               </v-card-text>
@@ -153,7 +153,7 @@
 
 
               <v-toolbar-title prepend-inner-icon="fa-light fa-coin" style="color: #008037;"
-                               class="font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;포인트
+                class="font-weight-bold subtitle-1 mt-1 ml-0 pl-0">&nbsp;포인트
               </v-toolbar-title>
 
 
@@ -170,7 +170,7 @@
 
 
             <v-text-field v-model="pay.point.insertpoint" style="max-width: 18em; bottom: 5px; right: 2em"
-                          class="shrink mx-4" dense label="냥" color="#008037" outlined clearable></v-text-field>
+              class="shrink mx-4" dense label="냥" color="#008037" outlined clearable></v-text-field>
 
 
             <v-card-actions>
@@ -218,7 +218,11 @@
   </v-container>
 </template>
 <script>
+(function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
 
+ChannelIO('boot', {
+  "pluginKey": "a7995c55-0012-40ed-a6d7-f2e3945d6a90"
+});
 export default {
   name: "Pay",
   data: () => ({

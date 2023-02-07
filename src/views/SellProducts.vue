@@ -39,6 +39,7 @@ const sell_product_schema = {
     'updated_at': ''
   }]
 }
+
 export default {
   name: "SellProducts",
   data: () => ({

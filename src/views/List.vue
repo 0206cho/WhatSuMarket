@@ -34,6 +34,12 @@ import sample from '../utils/samplePrdouct.json'
 import * as appx from "@/store/modules/app";
 import * as app_type from "@/store/modules/app/types";
 
+(function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.")}var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(args){ch.q.push(args)};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x)}}if(document.readyState==="complete"){l()}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l)}})();
+
+  ChannelIO('boot', {
+    "pluginKey": "a7995c55-0012-40ed-a6d7-f2e3945d6a90"
+  });
+
 export default {
   name: "List",
   data: () => ({
